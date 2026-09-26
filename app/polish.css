@@ -1,4 +1,19 @@
 /* Scoped finish rules: keep text accents separate from product artwork. */
+.onboarding{grid-template-columns:minmax(0,1fr)}
+.onboarding-stage,.onboarding-copy,.tour-visual,.tour-actions{min-width:0}
+@media(max-width:780px){
+  .onboarding .onboarding-stage{grid-template-columns:minmax(0,1fr);width:calc(100% - 40px);max-width:560px}
+  .onboarding .control-shell{width:100%;min-width:0;max-width:480px}
+  .onboarding .control-bottom{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr)}
+  .control-bottom article{min-width:0;padding:12px}
+  .control-bottom article>div{flex-wrap:wrap}
+  .onboarding .onboarding-footer{width:100%;padding:20px max(20px,env(safe-area-inset-right)) max(22px,env(safe-area-inset-bottom)) max(20px,env(safe-area-inset-left))}
+  .onboarding .tour-actions{display:flex;width:100%;gap:10px}
+  .onboarding .tour-next{flex:1 1 0;min-width:0;gap:10px;padding:0 16px;font-size:14px;min-height:52px}
+  .onboarding .tour-next span{flex-shrink:0}
+  .onboarding .tour-back{flex:0 0 auto;padding:0 14px;font-size:14px;min-height:52px}
+  .onboarding-caption{max-width:100%;overflow-wrap:break-word}
+}
 .label.lime{background:none;color:var(--lime)}
 .tablepop-logo{display:inline-flex;align-items:center;gap:7px;color:inherit;line-height:1;white-space:nowrap;vertical-align:middle}
 .tablepop-logo svg{width:32px;height:32px;flex:none}
